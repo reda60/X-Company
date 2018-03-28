@@ -1,0 +1,10 @@
+Objet métier :
+- Empreinte (=Analyse, état médical du patient):
+	composé de mesures
+	stocker dans un fichier
+	analyse médiacle, analyse complémentaires
+- Mesures (poids, age, adn, infos numérique)
+- Capteur
+- Personne (possède une Empreinte)
+- Maladie
+- Dépisteur (compare empreintes)
