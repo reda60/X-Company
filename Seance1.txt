@@ -1,4 +1,4 @@
-Objet métier :
+Lecture du sujet :
 - Empreinte (=Analyse, état médical du patient):
 	composé de mesures
 	stocker dans un fichier
@@ -8,3 +8,39 @@ Objet métier :
 - Personne (possède une Empreinte)
 - Maladie
 - Dépisteur (compare empreintes)
+
+Objet métier:
+- Médecin
+- Personne
+- Empreinte
+- Mesure
+- Signature
+
+
+Spécifications fonctionnelles:
+- Afficher maladie(s)
+- Afficher la signature d'une maladie
+- Analyser empreinte(s)
+- Ajouter une maladie
+- Saisir mesure(s)
+- Enregistrer un client (avec ses empreintes)
+
+
+Spécifications non fonctionnelles:
+- les empreintes sont confidentielles
+- le temps d'analyse est faible
+- le volume de donné peut être gros
+
+
+Plan de test :
+- ajouter un patient
+- saisir une mesure
+- afficher les maladies
+- afficher la signature d'une maladie
+- analyser une ou des empreintes
+- ajouter une maladie (uniquement l'administrateur)
+- temps d'analyse inférieur à X sec
+- une empreinte est confidentielles
+
+
+Formats de données: JSON
