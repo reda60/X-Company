@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>126</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Empreinte
+--
+_- nomAttributs:string[]_
+- ID:Int
+- valeurAttributs:List&lt;Mesure&gt;
+--
++ Empreinte(List&lt;Mesure&gt;)
++ Empreinte(List&lt;Empreinte&gt;)  
++ Comparer(Empreinte em)
++ SetValeurAttributs()
++ SetNomAttributs(List&lt;&gt;)
++ Afficher()
++ Sauvegarde(string path)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>336</y>
+      <w>161</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>CollectionMaladies
+--
+- liste:List&lt;Maladie&gt;
+- index:Iterator&lt;Maladie&gt;
+--
++ CollectionMaladies(string path)
++ Afficher() 
+- ajouter(Maladie m)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>336</y>
+      <w>189</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Gestion
+--
+- listeMaladies:CollectionMaladies
+--
++ AnalyserEmpreinte(List&lt;Empreinte&gt; l)
++ CreerEmpreintes() // Sauvegarde direct
++ Afficher()
++ Afficher(Maladie m)
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>189</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>126</y>
+      <w>238</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Maladie
+--
+- liste:Liste&lt;Empreinte&gt;
+- index:Iterator&lt;Empreinte&gt;
+- EmpreinteRef:Empreinte
+--
++ Maladie(List&lt;Empreinte&gt; l)//Creer empreinteRef
++ Comparer(Empreinte e)
++ Afficher()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>252</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+m1=1
+
+m2=n</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>385</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>161</y>
+      <w>140</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Mesure/
+--
++ Comparer(Mesure m)
++ Afficher()
++ Mesure(Liste&lt;Mesure&gt; m)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>294</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>TDouble
+--
+- mesure:Double
+--
++ TDouble(Double d)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>294</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>TString
+--
+- mesure:String
+--
++ TString(String s)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>294</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>TInteger
+--
+- mesure:Int
+--
++ TInteger(Int d)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>294</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>TBool
+--
+- mesure:Bool
+--
++ TBool(Bool b)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>245</y>
+      <w>175</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>245</y>
+      <w>70</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>245</y>
+      <w>84</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;100.0;40.0;100.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>245</y>
+      <w>196</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;260.0;40.0;260.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>189</y>
+      <w>224</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+</diagram>
